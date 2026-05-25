@@ -1,0 +1,82 @@
+---
+title: "Accidental Deaths of Children and Teens Involving a Firearm - Teresa Do"
+author: "Wells"
+date: "2026-05-25"
+output: html_document
+---
+
+# load libraries
+```{r}
+install.packages("tidycensus")
+library(tidyverse)
+library(tidycensus)
+library(janitor)
+```
+
+#load data
+```{r}
+
+children <- read_csv("../data/AccidentalChildDeaths.csv") |> 
+     clean_names() |>
+teens <- read_csv("../data/AccidentalTeenDeaths.csv") |> 
+     clean_names()
+
+```
+
+#Combine into one dataframe
+```{r}
+children$teen_or_child <- "child"
+teens$teen_or_child <- "teen"
+all <- rbind(children, teens)
+
+```
+
+## Deaths By State for Children
+
+```{r}
+options(scipen = 999)  # Disable scientific notation globally
+
+children |> 
+group_by(state) |> 
+  summarize(
+    Deaths = sum(victims_killed)
+  ) |> 
+  arrange(state)
+
+```
+
+## Deaths By State for Teens
+```{r}
+
+teens |> 
+group_by(state) |> 
+  summarize(
+    Deaths = sum(victims_killed)
+  ) |> 
+  arrange(state)
+```
+
+## Arrests for One City or County for Deaths Involving Children
+```{r}
+children |> 
+  filter(city_or_county == "Baton Rouge") |> 
+  group_by(city_or_county) |>
+  summarize(
+    Arrests = sum(suspects_arrested)
+  ) |> 
+  arrange(desc(Arrests))
+
+```
+
+## Deaths for One State and City or County for Deaths Involving Teens
+```{r}
+teens |> 
+  filter(state == "Maryland") |> 
+  filter(city_or_county == "Baltimore") |> 
+  group_by(city_or_county) |>
+  summarize(
+    Deaths = sum(victims_killed)
+  ) |> 
+  arrange(desc(Deaths))
+
+```
