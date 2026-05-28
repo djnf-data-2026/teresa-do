@@ -5,6 +5,19 @@ date: "2026-05-25"
 output: html_document
 ---
 
+The Trace - Gun Violence Analysis
+For Teresa Do
+Teresa will compile and analyze accidental gun deaths and injuries for children and teens.
+
+
+Gun Violence Archive data
+(The starter code has older data. You should update the downloads)
+https://www.gunviolencearchive.org/children-killed
+https://www.gunviolencearchive.org/accidental-teen-deaths
+The Gun Violence Archive is an online archive of gun violence incidents collected from over 7,500  law enforcement, media, government and commercial sources daily in an effort to provide near-real time data about the results of gun violence. GVA is an independent data collection and research group with no affiliation with any advocacy organization.
+
+
+
 # load libraries
 ```{r}
 install.packages("tidycensus")
@@ -13,11 +26,14 @@ library(tidycensus)
 library(janitor)
 ```
 
-#load data
+#load data from Gun Violence Archive
 ```{r}
+#Looks like you should update the downloads
 
+#https://www.gunviolencearchive.org/children-killed
 children <- read_csv("../data/AccidentalChildDeaths.csv") |> 
-     clean_names() |>
+     clean_names() 
+#https://www.gunviolencearchive.org/accidental-teen-deaths
 teens <- read_csv("../data/AccidentalTeenDeaths.csv") |> 
      clean_names()
 
@@ -80,3 +96,10 @@ teens |>
   arrange(desc(Deaths))
 
 ```
+
+
+The CDC Wonder Database
+https://wonder.cdc.gov/controller/datarequest/D158;jsessionid=B8BD647539274A8EF41B01B03A5C
+
+
+The Underlying Cause of Death database contains mortality and population counts for all U.S. counties. Data are based on death certificates for U.S. residents. Each death certificate identifies a single underlying cause of death and demographic data. The number of deaths, crude death rates or age-adjusted death rates, and 95% confidence intervals and standard errors for death rates can be obtained by place of residence (total U.S., region, state and county), age group (single-year-of age, 5-year age groups, 10-year age groups and infant age groups), race, Hispanic ethnicity, sex, year, cause-of-death (4-digit ICD-10 code or group of codes), injury intent and injury mechanism, drug/alcohol induced causes and urbanization categories. Data are also available for place of death, month and week day of death, and whether an autopsy was performed.
