@@ -1,0 +1,38 @@
+---
+title: "First Draft of Story Memo"
+author: "Do"
+date: "2026-06-02"
+output: html_document
+---
+
+Teresa Do
+
+[teresajourno\@gmail.com](mailto:teresajourno@gmail.com){.email} \| 254-316-3358
+
+2026-06-02
+
+This story would investigate the highest rates of accidental gun deaths for teens and children. Through preliminary data analysis, Texas and Tennessee stand at the highest total counts of accidental gun deaths for teens and children respectively.
+
+This story is important because according to the report [Child and Adolescent Firearm Deaths: National Trends and Variation by Demographics and States](https://www.kff.org/mental-health/child-and-adolescent-firearm-deaths-national-trends-and-variation-by-demographics-and-states/), firearm deaths among those 17 and younger has dethroned motor vehicle deaths as the leading cause of death for that age group since 2020.
+
+My target audiences would be parents and legislators. Parents would be interested in this story because it could speak to concerns with firearm safety within the home. Legislators would be interested in how this story would contribute to the conversation around gun safety and regulation.
+
+Some people/organizations I would be interested in reaching out to and interviewing for this story:
+
+1.  A representative from the [Everytown Support Fund](https://everytownsupportfund.org/faq/), which is an organization that focuses on gun violence prevention and publishes their own unintentional shootings by children index. I would be interested in how they go about their methodology in collecting this information.
+2.  Rebecca Wilson is the lead author of the report published through the CDC called ["Unintentional Firearm Injury Deaths Among Children and Adolescents Aged 0-17 Years"](https://www.cdc.gov/mmwr/volumes/72/wr/mm7250a1.htm#contribAff). I would be interested in if she has kept up with the trends in this report and if she can speak to the situation today.
+3.  Rep. Christian D. Menefee introduced the [Kimberly Vaughan Firearm Safe Storage Act.](https://www.congress.gov/bill/119th-congress/house-bill/8619/text) This bill has yet to make it through the House.
+
+Through reporting, I hope to shed a light and connect the research that has been done on this topic with human anecdotes. This story could potentially impact gun legislation and/or awareness of safe storage.
+
+Some things I found surprising/interesting:
+
+1.  There is actually quite some conflict on getting safe storage laws passed. Even though it's not aimed at limiting the acquisition of guns for adults, there is still push back on safe storage laws.
+2.  The total counts for accidental teens and children don't align to the same state. The highest count of deaths for teens is in Texas vs. Tennessee for children (albeit not by a lot).
+3.  This point ties into previous coverage on this topic, but I was surprised that most coverage is on a case-to-case basis, with stories emerging right when an incident happens. There is not really one story that ties all of these events together and brings them into the greater context of legislation. Other coverage on this topic tends to be more academic rather than anecdotal.
+
+The main visual I would want to create for this story is an interactive map where users can look at accidental deaths per state by the state. With a lot of time, I could envision a very meaningful video series interviewing family members of the deceased, but it might be difficult given the guilt that often comes with these situations. I wouldn't want to do more harm to these families than good.
+
+Currently, I'm most focused on obtaining accidental deaths in teens and children per capita by state. I would also like to do more research into the various reasons why safe storage laws are opposed and what are the names of the people/organizations that are the loudest in opposition. Additionally, to be able to get more intimate interviews, it will have to take some digging as many news articles do not include the names of victims who are minors.
+
+I could see this story developing in parts. A local story based specifically in Texas or specifically in Tennessee with some accompanying data analysis could have an ETA of mid-July. A nationwide analysis, including time to interview sources like experts, families and law enforcement would have an ETA closer to the middle or end of August.

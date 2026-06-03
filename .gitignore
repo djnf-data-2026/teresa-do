@@ -2,3 +2,5 @@
 *.RData
 *.Ruserdata
 *.Rproj.user
+*.Rproj
+docs/TeresaDoPitch.Rmd

@@ -1,0 +1,258 @@
+---
+title: "Gun Deaths and Injuries for Children and Teens"
+author: "Teresa Do"
+output: html_document
+---
+
+This project investigates accidental gun deaths and injuries for children and teens based off of data provided by the [Gun Violence Archive](https://www.gunviolencearchive.org/).
+
+The goal of this project is to investigate the states and cities/counties that include the most incidents of accidental child and teen deaths by firearms, both in total counts and per capita.
+
+# Set up
+
+Loading libraries.
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library(tidycensus)
+
+# disable scientific notation
+options(scipen = 999)
+```
+
+# Load data from Gun Violence Archive
+
+```{r}
+#| label: load-data
+#| message: false
+#| warning: false
+
+# for now, I'm focusing just on accidental child deaths
+# I can also take a look at all child deaths
+child_deaths <- read_csv("../data/2026-06-02-accidental-child-deaths.csv") |> clean_names()
+teen_deaths <- read_csv("../data/2026-06-02-accidental-teen-deaths.csv") |> clean_names()
+
+child_deaths
+teen_deaths
+```
+
+We can also combine these into one data frame by binding the two tibbles together.
+
+```{r}
+#| label: bind-data
+#| message: false
+#| warning: false
+
+child_deaths$teen_or_child <- "Child"
+teen_deaths$teen_or_child <- "Teen"
+
+all_deaths <- rbind(child_deaths, teen_deaths) |>
+  unique()
+
+# checking to see if any child incidents and teen incidents overlap
+all_deaths |>
+  get_dupes()
+
+all_deaths
+```
+
+# Total counts of deaths
+
+In this portion, I'll just take a look at the total counts of deaths for teens and children across states and cities/counties.
+
+> NOTE: Need to look into what Gun Violence Archive defines the categories or "Teen" and "Child" because teen is a bit ambiguous
+
+## Teens
+
+The Gun Violence Archive has a [pre-queried page](https://www.gunviolencearchive.org/accidental-teen-deaths?page=62) for accidental deaths of teens.
+
+Let's take a look at the total sum of accidental teen deaths across states.
+
+```{r}
+#| label: teen-deaths-state
+#| message: false
+#| warning: false
+
+teen_by_state <-teen_deaths |>
+  group_by(state) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+
+teen_by_state
+```
+
+Based off of just total counts, Texas has the most accidental teen deaths by firearm. We will also take a look how this stacks up per capita, taking into account that Texas is a big state.
+
+I'm also interested in looking at this on the city/county level.
+
+```{r}
+#| label: teen-deaths-county
+#| message: false
+#| warning: false
+
+teen_deaths |>
+  group_by(state, city_or_county) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+```
+
+Again, Texas is in first place with Houston, which is the fourth-most populous city in the country.
+
+## Children
+
+Do the same for accidental children deaths by state.
+
+```{r}
+#| label: child-deaths-state
+#| message: false
+#| warning: false
+
+child_by_state <- child_deaths |>
+  group_by(state) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+
+child_by_state
+```
+
+When it comes to total counts of accidental children deaths by firearms, Tennessee comes up at 27 deaths. Again, I will also take a look at how this stacks up per capita.
+
+Looking now at city/county level.
+
+```{r}
+#| label: child-deaths-county
+#| message: false
+#| warning: false
+
+child_deaths |>
+  group_by(state, city_or_county) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+```
+
+Memphis, Tennessee has 12 accidental child deaths by firearms but is also a pretty big city.
+
+# Per capita deaths
+
+We want to be able to examine these values in the context of the total population of an area. First, let's figure out what [variables](https://walker-data.com/census-r/an-introduction-to-tidycensus.html#searching-for-variables-in-tidycensus) to use with the `tidycensus` package.
+
+```{r}
+#| label: tidycensus-variables
+#| message: false
+#| warning: false
+
+# ask about using decennial vs. acs vs. get_estimates()
+vars <- load_variables(2024, dataset = "acs5", cache = TRUE)
+# View(vars)
+```
+
+`B01001_001` is the code for population estimates for a block group.
+
+Using this variable, we can find the population by state and then bind these population values to the data frames containing deaths by state for both teens and children.
+
+```{r}
+#| label: state-pop
+#| message: false
+#| warning: false
+
+population <- get_acs(
+  geography = "state",
+  variables = "B01001_001",
+  year = 2024,
+  survey = "acs5"
+) |>
+  clean_names() |>
+  select(
+    geoid,
+    state = name,
+    pop_estimate = estimate
+  )
+
+population
+```
+
+I can join these using state name to be able to calculate for teens and children. 
+
+## Teens
+
+Let's calculate the accidental teen gun deaths per capita by state. Combine the two data frames with a left_join (because Puerto Rico is not included in Gun Violence Archive)
+
+```{r}
+#| label: combine-teen-w-pop
+#| message: false
+#| warning: false
+
+teen_by_state_w_pop <- teen_by_state |>
+  left_join(
+    population,
+    by = join_by(state)
+  )
+
+teen_by_state_w_pop
+```
+
+Now, calculate per 100,000 rates for accidental teen deaths by guns per state. We are choosing to do per 100,000 because the rates are so small.
+
+```{r}
+#| label: teen-deaths-per-100000
+#| message: false
+#| warning: false
+
+top_20_teen <- teen_by_state_w_pop |>
+  mutate(
+    per_100000 = deaths / pop_estimate * 100000
+  ) |>
+  arrange(per_100000 |> desc()) |>
+  head(20)
+
+top_20_teen
+```
+
+Based on per capita calculations, Mississippi, Louisiana and Alabama actually have the highest rates of accidental teen deaths by guns.
+
+## Children
+
+Now, let's calculate the accidental child deaths by gun per 1,000,000 people. First, combine the population data frame with our existing child deaths data frame.
+
+```{r}
+#| label: combine-child-w-pop
+#| message: false
+#| warning: false
+
+child_by_state_w_pop <- child_by_state |>
+  left_join(
+    population,
+    join_by(state)
+  )
+
+child_by_state_w_pop
+```
+
+Now, we can calculate the per 1,000,000 rate. We chose to calculate this as per 1,000,000 people since the number of child deaths are so much lower than number of teen deaths.
+
+```{r}
+#| label: child-deaths-per-100000
+#| message: false
+#| warning: false
+
+child_by_state_w_pop |>
+  mutate(
+    per_1000000 = deaths / pop_estimate * 1000000
+  ) |>
+  arrange(per_1000000 |> desc())
+```
+
+Tenneessee still comes in first with around 4 accidental child gun deaths per 1,000,000 people.

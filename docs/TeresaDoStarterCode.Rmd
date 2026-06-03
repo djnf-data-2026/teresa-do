@@ -20,7 +20,7 @@ library(tidycensus)
 library(janitor)
 ```
 
-#load data from Gun Violence Archive
+# load data from Gun Violence Archive
 
 ```{r}
 #Looks like you should update the downloads
