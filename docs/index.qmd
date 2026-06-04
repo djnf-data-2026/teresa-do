@@ -10,6 +10,12 @@ Contact Information: teresajourno\@gmail.com \| 254-316-3358
 
 This story would investigate the highest rates of accidental gun deaths for teens and children. Through preliminary data analysis, Texas and Tennessee stand at the highest total counts of accidental gun deaths for teens and children respectively. However, Mississippi beats out Texas when we consider it in terms of total population estimates.
 
+**rsw comment: i moved this higher**
+
+## Importance
+
+According to the report [Child and Adolescent Firearm Deaths: National Trends and Variation by Demographics and States](https://www.kff.org/mental-health/child-and-adolescent-firearm-deaths-national-trends-and-variation-by-demographics-and-states/), firearm deaths among those 17 and younger has dethroned motor vehicle deaths as the leading cause of death for that age group since 2020.
+
 ## Visual: How do states compare?
 
 This project investigates accidental gun deaths and injuries for children and teens based off of data provided by the [Gun Violence Archive](https://www.gunviolencearchive.org/).
@@ -17,6 +23,8 @@ This project investigates accidental gun deaths and injuries for children and te
 Accidental teen death data is provided [directly](https://www.gunviolencearchive.org/accidental-teen-deaths) while child death data was [queried](https://www.gunviolencearchive.org/query/d0ea8082-83a5-41b9-8cae-04431d32ae7e) using the archive's search feature.
 
 ### Children
+
+**rsw comment: define the ages for children and teens in these two separate analyses**
 
 ```{=html}
 <iframe title="Tennessee ranks first in accidental child deaths by gun per 1 million people" aria-label="Bar Chart" id="datawrapper-chart-S46iI" src="https://datawrapper.dwcdn.net/S46iI/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
@@ -30,15 +38,13 @@ Accidental teen death data is provided [directly](https://www.gunviolencearchive
 
 If you're interested in how teen deaths compare across all 50 states:
 
+**rsw comment: let's fix the tooltip to the number is rounded and there's some explanation of the data that's being displayed**
+
 ```{=html}
 <iframe title="Mississippi ranks first in number of accidental teen deaths by gun per 100,000 people." aria-label="Choropleth map" id="datawrapper-chart-pr1Rc" src="https://datawrapper.dwcdn.net/pr1Rc/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 ```
 
 A chloropleth map was not created for child deaths because not all 50 states are represented in that data.
-
-## Importance
-
-According to the report [Child and Adolescent Firearm Deaths: National Trends and Variation by Demographics and States](https://www.kff.org/mental-health/child-and-adolescent-firearm-deaths-national-trends-and-variation-by-demographics-and-states/), firearm deaths among those 17 and younger has dethroned motor vehicle deaths as the leading cause of death for that age group since 2020.
 
 ## Audience, Sourcing and Impact
 
@@ -48,9 +54,9 @@ Some people/organizations I would be interested in reaching out to and interview
 
 1.  A representative from the [Everytown Support Fund](https://everytownsupportfund.org/faq/), which is an organization that focuses on gun violence prevention and publishes their own unintentional shootings by children index. I would be interested in how they go about their methodology in collecting this information.
 2.  Rebecca Wilson is the lead author of the report published through the CDC called ["Unintentional Firearm Injury Deaths Among Children and Adolescents Aged 0-17 Years"](https://www.cdc.gov/mmwr/volumes/72/wr/mm7250a1.htm#contribAff). I would be interested in if she has kept up with the trends in this report and if she can speak to the situation today.
-3.  Rep. Christian D. Menefee introduced the [Kimberly Vaughan Firearm Safe Storage Act.](https://www.congress.gov/bill/119th-congress/house-bill/8619/text) This bill has yet to make it through the House.
+3.  Rep. Christian D. Menefee **rsw comment: which state and political party??** introduced the [Kimberly Vaughan Firearm Safe Storage Act.](https://www.congress.gov/bill/119th-congress/house-bill/8619/text) This bill has yet to make it through the House.
 
-Additionally, Tennessee is home to some of the biggest gun manufacturers, including Barrett Firearms. Barrett Firearms is a private company, so I'll have to do a little bit more digging to find out more about its financials. However, the company did [announce](https://tnecd.com/news/barrett-firearms-manufacturing-inc-to-expand-headquarters-manufacturing-and-other-major-operations-in-rutherford-county/) in 2025 that it would invest \$76.4 million to create a new headquarters that would include a manufacturing facility. It is also now home to Smith & Wesson, which is publicly traded.
+Additionally, Tennessee is home to some of the biggest gun manufacturers, including Barrett Firearms. Barrett Firearms is a private company, so I'll have to do a little bit more digging to find out more about its financials. However, the company did [announce](https://tnecd.com/news/barrett-firearms-manufacturing-inc-to-expand-headquarters-manufacturing-and-other-major-operations-in-rutherford-county/) in 2025 that it would invest \$76.4 million to create a new headquarters that would include a manufacturing facility. It is also now home to Smith & Wesson, which is publicly traded. **rsw comment: dig out the revenues and profits for Smith and Wesson from the recent 10-K**
 
 Through reporting, I hope to shed a light and connect the research that has been done on this topic with human anecdotes. This story could potentially impact gun legislation and/or awareness of safe storage.
 
