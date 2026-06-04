@@ -1,0 +1,381 @@
+---
+title: "Accidental Gun Deaths in Teens and Children"
+author: "Teresa Do"
+date: "2026-06-03"
+---
+
+Contact Information: teresajourno\@gmail.com \| 254-316-3358
+
+## About this story
+
+This story would investigate the highest rates of accidental gun deaths for teens and children. Through preliminary data analysis, Texas and Tennessee stand at the highest total counts of accidental gun deaths for teens and children respectively. However, Mississippi beats out Texas when we consider it in terms of total population estimates.
+
+## Visual: How do states compare?
+
+This project investigates accidental gun deaths and injuries for children and teens based off of data provided by the [Gun Violence Archive](https://www.gunviolencearchive.org/).
+
+Accidental teen death data is provided [directly](https://www.gunviolencearchive.org/accidental-teen-deaths) while child death data was [queried](https://www.gunviolencearchive.org/query/d0ea8082-83a5-41b9-8cae-04431d32ae7e) using the archive's search feature.
+
+### Children
+
+```{=html}
+<iframe title="Tennessee ranks first in accidental child deaths by gun per 1 million people" aria-label="Bar Chart" id="datawrapper-chart-S46iI" src="https://datawrapper.dwcdn.net/S46iI/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
+
+### Teens
+
+```{=html}
+<iframe title="Mississippi ranks first in number of accidental teen deaths by gun per 100,000 people" aria-label="Bar Chart" id="datawrapper-chart-wlRnE" src="https://datawrapper.dwcdn.net/wlRnE/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
+
+If you're interested in how teen deaths compare across all 50 states:
+
+```{=html}
+<iframe title="Mississippi ranks first in number of accidental teen deaths by gun per 100,000 people." aria-label="Choropleth map" id="datawrapper-chart-pr1Rc" src="https://datawrapper.dwcdn.net/pr1Rc/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
+
+A chloropleth map was not created for child deaths because not all 50 states are represented in that data.
+
+## Importance
+
+According to the report [Child and Adolescent Firearm Deaths: National Trends and Variation by Demographics and States](https://www.kff.org/mental-health/child-and-adolescent-firearm-deaths-national-trends-and-variation-by-demographics-and-states/), firearm deaths among those 17 and younger has dethroned motor vehicle deaths as the leading cause of death for that age group since 2020.
+
+## Audience, Sourcing and Impact
+
+My target audiences would be parents and legislators. Parents would be interested in this story because it could speak to concerns with firearm safety within the home. Legislators would be interested in how this story would contribute to the conversation around gun safety and regulation.
+
+Some people/organizations I would be interested in reaching out to and interviewing for this story:
+
+1.  A representative from the [Everytown Support Fund](https://everytownsupportfund.org/faq/), which is an organization that focuses on gun violence prevention and publishes their own unintentional shootings by children index. I would be interested in how they go about their methodology in collecting this information.
+2.  Rebecca Wilson is the lead author of the report published through the CDC called ["Unintentional Firearm Injury Deaths Among Children and Adolescents Aged 0-17 Years"](https://www.cdc.gov/mmwr/volumes/72/wr/mm7250a1.htm#contribAff). I would be interested in if she has kept up with the trends in this report and if she can speak to the situation today.
+3.  Rep. Christian D. Menefee introduced the [Kimberly Vaughan Firearm Safe Storage Act.](https://www.congress.gov/bill/119th-congress/house-bill/8619/text) This bill has yet to make it through the House.
+
+Additionally, Tennessee is home to some of the biggest gun manufacturers, including Barrett Firearms. Barrett Firearms is a private company, so I'll have to do a little bit more digging to find out more about its financials. However, the company did [announce](https://tnecd.com/news/barrett-firearms-manufacturing-inc-to-expand-headquarters-manufacturing-and-other-major-operations-in-rutherford-county/) in 2025 that it would invest \$76.4 million to create a new headquarters that would include a manufacturing facility. It is also now home to Smith & Wesson, which is publicly traded.
+
+Through reporting, I hope to shed a light and connect the research that has been done on this topic with human anecdotes. This story could potentially impact gun legislation and/or awareness of safe storage.
+
+## Things of note
+
+Some things I found surprising/interesting:
+
+1.  There is actually quite some conflict on getting safe storage laws passed. Even though it's not aimed at limiting the acquisition of guns for adults, there is still push back on safe storage laws.
+2.  The total counts for accidental teens and children don't align to the same state. The highest count of deaths for teens is in Texas vs. Tennessee for children (albeit not by a lot).
+3.  This point ties into previous coverage on this topic, but I was surprised that most coverage is on a case-to-case basis, with stories emerging right when an incident happens. There is not really one story that ties all of these events together and brings them into the greater context of legislation. Other coverage on this topic tends to be more academic rather than anecdotal.
+
+## Visuals
+
+The main visual I would want to create for this story is an interactive map where users can look at accidental deaths per state by the state. With a lot of time, I could envision a very meaningful video series interviewing family members of the deceased, but it might be difficult given the guilt that often comes with these situations. I wouldn't want to do more harm to these families than good.
+
+## What are the next steps?
+
+### Questions
+
+1.  Why is safe storage opposed despite the fact it does not affect the ability to obtain firearms?
+2.  What is the median age for teens and children involved in accidental gun deaths?
+3.  Is there any relevance to the gun used in these incidents? What type of gun is most common among accidental shootings?
+4.  How do accidental gun deaths stack up to all accidental deaths? (Would have to look at CDC Wonder data)
+
+### Potential Holes
+
+- The downloaded data does not provide much more detail about each incident such as age of the victims or what type of firearm was used. I would be interested in seeing if there is any way I can extract more details using the incident reports that are linked from the web version of the data.
+- Many news articles do not include the names of victims who are minors, either by law or out of respect to the family. This could pose an issue if we wanted to get more intimate interviews with the families of victims.
+- I would like to speak with a representative who knows the Gun Violence Archive data well to make that my query is capturing all incidents of accidental child deaths. I tried to keep my filter as broad as possible.
+
+## ETA?
+
+I could see this story developing in parts. A local story based specifically in Texas or specifically in Tennessee with some accompanying data analysis could have an ETA of mid-July. A nationwide analysis, including time to interview sources like experts, families and law enforcement would have an ETA closer to the middle or end of August.
+
+# Data Analysis
+
+## Set up
+
+Loading libraries.
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(janitor)
+library(tidycensus)
+library(DT)
+
+# disable scientific notation
+options(scipen = 999)
+```
+
+## Load data from Gun Violence Archive
+
+```{r}
+#| label: load-data
+#| message: false
+#| warning: false
+
+# for now, I'm focusing just on accidental child deaths
+# I can also take a look at all child deaths
+child_deaths <- read_csv("../data/2026-06-02-accidental-child-deaths.csv") |> clean_names()
+teen_deaths <- read_csv("../data/2026-06-02-accidental-teen-deaths.csv") |> clean_names()
+
+child_deaths
+teen_deaths
+```
+
+We can also combine these into one data frame by binding the two tibbles together.
+
+```{r}
+#| label: bind-data
+#| message: false
+#| warning: false
+
+child_deaths$teen_or_child <- "Child"
+teen_deaths$teen_or_child <- "Teen"
+
+all_deaths <- rbind(child_deaths, teen_deaths) |>
+  unique()
+
+# checking to see if any child incidents and teen incidents overlap
+all_deaths |>
+  get_dupes()
+
+all_deaths
+```
+
+## Total counts of deaths
+
+In this portion, I'll just take a look at the total counts of deaths for teens and children across states and cities/counties.
+
+> NOTE: Need to look into what Gun Violence Archive defines the categories or "Teen" and "Child" because teen is a bit ambiguous
+
+### Teens
+
+The Gun Violence Archive has a [pre-queried page](https://www.gunviolencearchive.org/accidental-teen-deaths?page=62) for accidental deaths of teens.
+
+Let's take a look at the total sum of accidental teen deaths across states.
+
+```{r}
+#| label: teen-deaths-state
+#| message: false
+#| warning: false
+
+teen_by_state <- teen_deaths |>
+  group_by(state) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+
+teen_by_state
+```
+
+Based off of just total counts, Texas has the most accidental teen deaths by firearm. We will also take a look how this stacks up per capita, taking into account that Texas is a big state.
+
+I'm also interested in looking at this on the city/county level.
+
+```{r}
+#| label: teen-deaths-county
+#| message: false
+#| warning: false
+
+teen_city_lvl <- teen_deaths |>
+  group_by(state, city_or_county) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+
+teen_city_lvl |> datatable()
+```
+
+Again, Texas is in first place with Houston, which is the fourth-most populous city in the country.
+
+### Children
+
+Do the same for accidental children deaths by state.
+
+```{r}
+#| label: child-deaths-state
+#| message: false
+#| warning: false
+
+child_by_state <- child_deaths |>
+  group_by(state) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+
+child_by_state
+```
+
+When it comes to total counts of accidental children deaths by firearms, Tennessee comes up at 27 deaths. Again, I will also take a look at how this stacks up per capita.
+
+Looking now at city/county level.
+
+```{r}
+#| label: child-deaths-county
+#| message: false
+#| warning: false
+
+child_city_lvl <- child_deaths |>
+  group_by(state, city_or_county) |>
+  summarize(
+    deaths = sum(victims_killed)
+  ) |>
+  arrange(deaths |> desc())
+
+child_city_lvl |> datatable()
+```
+
+Memphis, Tennessee has 12 accidental child deaths by firearms but is also a pretty big city.
+
+## Rates of deaths based on population
+
+We want to be able to examine these values in the context of the total population of an area. First, let's figure out what [variables](https://walker-data.com/census-r/an-introduction-to-tidycensus.html#searching-for-variables-in-tidycensus) to use with the `tidycensus` package.
+
+```{r}
+#| label: tidycensus-variables
+#| message: false
+#| warning: false
+
+# ask about using decennial vs. acs vs. get_estimates()
+vars <- load_variables(2024, dataset = "acs5", cache = TRUE)
+# View(vars)
+```
+
+`B01001_001` is the code for population estimates for a block group.
+
+Using this variable, we can find the population by state and then bind these population values to the data frames containing deaths by state for both teens and children.
+
+```{r}
+#| label: state-pop
+#| message: false
+#| warning: false
+
+population <- get_acs(
+  geography = "state",
+  variables = "B01001_001",
+  year = 2024,
+  survey = "acs5"
+) |>
+  clean_names() |>
+  select(
+    geoid,
+    state = name,
+    pop_estimate = estimate
+  )
+
+population
+```
+
+I can join these using state name to be able to calculate for teens and children.
+
+### Teens
+
+Let's calculate the accidental teen gun deaths per 100,000 by state. Combine the two data frames with a left_join (because Puerto Rico is not included in Gun Violence Archive)
+
+```{r}
+#| label: combine-teen-w-pop
+#| message: false
+#| warning: false
+
+teen_by_state_w_pop <- teen_by_state |>
+  left_join(
+    population,
+    by = join_by(state)
+  )
+
+teen_by_state_w_pop
+```
+
+Now, calculate per 100,000 rates for accidental teen deaths by guns per state. We are choosing to do per 100,000 because the rates are so small.
+
+```{r}
+#| label: teen-deaths-per-100000
+#| message: false
+#| warning: false
+
+teen_by_state_per_100000 <- teen_by_state_w_pop |>
+  mutate(
+    per_100000 = deaths / pop_estimate * 100000
+  ) |>
+  arrange(per_100000 |> desc())
+```
+
+Based on per 100,000 calculations, Mississippi, Louisiana and Alabama actually have the highest rates of accidental teen deaths by guns.
+
+Export for visualization in Datawrapper.
+
+```{r}
+#| label: export-teen-data
+#| message: false
+#| warning: false
+
+teen_export <- teen_by_state_per_100000 |>
+  select(
+    state,
+    per_100000
+  )
+
+top_20_teen <- teen_export |> head(20)
+
+teen_export |>
+  write_csv("../data/2026-06-03-teen-per-100000.csv")
+
+top_20_teen |>
+  write_csv("../data/2026-06-03-teen-top-20.csv")
+```
+
+## Children
+
+Now, let's calculate the accidental child deaths by gun per 1 million people. First, combine the population data frame with our existing child deaths data frame.
+
+```{r}
+#| label: combine-child-w-pop
+#| message: false
+#| warning: false
+
+child_by_state_w_pop <- child_by_state |>
+  left_join(
+    population,
+    join_by(state)
+  )
+
+child_by_state_w_pop
+```
+
+Now, we can calculate the per 1 million rate. We chose to calculate this as per 1 million people since the number of child deaths are so much lower than number of teen deaths.
+
+```{r}
+#| label: child-deaths-per-100000
+#| message: false
+#| warning: false
+
+child_by_state_per_1mil <- child_by_state_w_pop |>
+  mutate(
+    per_1000000 = deaths / pop_estimate * 1000000
+  ) |>
+  arrange(per_1000000 |> desc())
+
+child_by_state_per_1mil
+```
+
+Tennessee still comes in first with around 4 accidental child gun deaths per 1,000,000 people.
+
+Export for visualization in Datawrapper.
+
+```{r}
+#| label: export-child-data
+#| message: false
+#| warning: false
+
+child_export <- child_by_state_per_1mil |>
+  select(
+    state,
+    per_1000000
+  ) |>
+  head(20)
+
+child_export |>
+  write_csv("../data/2026-06-03-child-per-1mil.csv")
+```

@@ -1,5 +1,5 @@
 ---
-title: "Gun Deaths and Injuries for Children and Teens"
+title: "Accidental Gun Deaths and Injuries for Children and Teens"
 author: "Teresa Do"
 output: html_document
 ---
@@ -211,17 +211,36 @@ Now, calculate per 100,000 rates for accidental teen deaths by guns per state. W
 #| message: false
 #| warning: false
 
-top_20_teen <- teen_by_state_w_pop |>
+teen_by_state_per_100000 <- teen_by_state_w_pop |>
   mutate(
     per_100000 = deaths / pop_estimate * 100000
   ) |>
-  arrange(per_100000 |> desc()) |>
-  head(20)
-
-top_20_teen
+  arrange(per_100000 |> desc())
 ```
 
 Based on per capita calculations, Mississippi, Louisiana and Alabama actually have the highest rates of accidental teen deaths by guns.
+
+Export for visualization in Datawrapper.
+
+```{r}
+#| label: export-teen-data
+#| message: false
+#| warning: false
+
+teen_export <- teen_by_state_per_100000 |>
+  select(
+    state,
+    per_100000
+  )
+
+top_20_teen <- teen_export |> head(20)
+
+teen_export |>
+  write_csv("../data/2026-06-03-teen-per-100000.csv")
+
+top_20_teen |>
+  write_csv("../data/2026-06-03-teen-top-20.csv")
+```
 
 ## Children
 
@@ -248,11 +267,32 @@ Now, we can calculate the per 1,000,000 rate. We chose to calculate this as per 
 #| message: false
 #| warning: false
 
-child_by_state_w_pop |>
+child_by_state_per_1mil <- child_by_state_w_pop |>
   mutate(
     per_1000000 = deaths / pop_estimate * 1000000
   ) |>
   arrange(per_1000000 |> desc())
+
+child_by_state_per_1mil
 ```
 
-Tenneessee still comes in first with around 4 accidental child gun deaths per 1,000,000 people.
+Tennessee still comes in first with around 4 accidental child gun deaths per 1,000,000 people.
+
+Export for visualization in Datawrapper.
+
+```{r}
+#| label: export-child-data
+#| message: false
+#| warning: false
+
+child_export <- child_by_state_per_1mil |>
+  select(
+    state,
+    per_1000000
+  ) |>
+  head(20)
+
+child_export |>
+  write_csv("../data/2026-06-03-child-per-1mil.csv")
+```
+
