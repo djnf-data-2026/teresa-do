@@ -32,6 +32,12 @@ Accidental teen death data is provided [directly](https://www.gunviolencearchive
 <iframe title="Tennessee ranks first in accidental child deaths by gun per 1 million people" aria-label="Bar Chart" id="datawrapper-chart-S46iI" src="https://datawrapper.dwcdn.net/S46iI/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 ```
 
+And a searchable table of your city for total counts:
+
+```{=html}
+<iframe title="Memphis has the most total accidental child deaths from 2014 to 2026" aria-label="Table" id="datawrapper-chart-dciOn" src="https://datawrapper.dwcdn.net/dciOn/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1023" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
+
 ### Teens
 
 ```{=html}
@@ -43,6 +49,13 @@ If you're interested in how teen deaths compare across all 50 states:
 ```{=html}
 <iframe title="Mississippi ranks first in number of accidental teen deaths by gun per 100,000 people." aria-label="Choropleth map" id="datawrapper-chart-pr1Rc" src="https://datawrapper.dwcdn.net/pr1Rc/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
 ```
+
+And a searchable table of total counts for your city/county:
+
+```{=html}
+<iframe title="Houston, Texas has the most total accidental teen deaths from 2014 to 2026" aria-label="Table" id="datawrapper-chart-4OlIR" src="https://datawrapper.dwcdn.net/4OlIR/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="989" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+```
+
 
 A chloropleth map was not created for child deaths because not all 50 states are represented in that data.
 
@@ -189,6 +202,9 @@ teen_city_lvl <- teen_deaths |>
   arrange(deaths |> desc())
 
 teen_city_lvl |> datatable()
+
+teen_city_lvl |>
+  write_csv("../data/2026-06-05-teen-city-lvl.csv")
 ```
 
 Again, Texas is in first place with Houston, which is the fourth-most populous city in the country.
@@ -229,6 +245,8 @@ child_city_lvl <- child_deaths |>
   arrange(deaths |> desc())
 
 child_city_lvl |> datatable()
+
+child_city_lvl |> write_csv("../data/2026-06-05-child-city-lvl.csv")
 ```
 
 Memphis, Tennessee has 12 accidental child deaths by firearms but is also a pretty big city.
