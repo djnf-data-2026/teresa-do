@@ -118,7 +118,6 @@ Loading libraries.
 library(tidyverse)
 library(janitor)
 library(tidycensus)
-library(DT)
 
 # disable scientific notation
 options(scipen = 999)
@@ -201,7 +200,7 @@ teen_city_lvl <- teen_deaths |>
   ) |>
   arrange(deaths |> desc())
 
-teen_city_lvl |> datatable()
+teen_city_lvl
 
 teen_city_lvl |>
   write_csv("../data/2026-06-05-teen-city-lvl.csv")
@@ -244,7 +243,7 @@ child_city_lvl <- child_deaths |>
   ) |>
   arrange(deaths |> desc())
 
-child_city_lvl |> datatable()
+child_city_lvl
 
 child_city_lvl |> write_csv("../data/2026-06-05-child-city-lvl.csv")
 ```
