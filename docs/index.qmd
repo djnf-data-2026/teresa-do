@@ -1,16 +1,20 @@
 ---
 title: "Accidental Gun Deaths in Teens and Children"
-author: "Teresa Do"
-date: "2026-06-03"
+author: 
+  - name: "Teresa Do"
+    email: teresajourno@gmail.com
+date: last-modified
+date-format: "YYYY-MM-DD HH:mm"
+format:
+  html:
+    toc: true
+code-fold: true
+code-summary: "Expand to see code"
 ---
-
-Contact Information: teresajourno\@gmail.com \| 254-316-3358
 
 ## About this story
 
 This story would investigate the highest rates of accidental gun deaths for teens and children. Through preliminary data analysis, Texas and Tennessee stand at the highest total counts of accidental gun deaths for teens and children respectively. However, Mississippi beats out Texas when we consider it in terms of total population estimates.
-
-**rsw comment: i moved this higher**
 
 ## Importance
 
@@ -18,13 +22,11 @@ According to the report [Child and Adolescent Firearm Deaths: National Trends an
 
 ## Visual: How do states compare?
 
-This project investigates accidental gun deaths and injuries for children and teens based off of data provided by the [Gun Violence Archive](https://www.gunviolencearchive.org/).
+This project investigates accidental gun deaths and injuries for children and teens based off of data provided by the [Gun Violence Archive](https://www.gunviolencearchive.org/). The Gun Violence Archive defines children as ages 0 to 11 years while teens are ages 12 to 17 years.
 
 Accidental teen death data is provided [directly](https://www.gunviolencearchive.org/accidental-teen-deaths) while child death data was [queried](https://www.gunviolencearchive.org/query/d0ea8082-83a5-41b9-8cae-04431d32ae7e) using the archive's search feature.
 
 ### Children
-
-**rsw comment: define the ages for children and teens in these two separate analyses**
 
 ```{=html}
 <iframe title="Tennessee ranks first in accidental child deaths by gun per 1 million people" aria-label="Bar Chart" id="datawrapper-chart-S46iI" src="https://datawrapper.dwcdn.net/S46iI/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
@@ -37,8 +39,6 @@ Accidental teen death data is provided [directly](https://www.gunviolencearchive
 ```
 
 If you're interested in how teen deaths compare across all 50 states:
-
-**rsw comment: let's fix the tooltip to the number is rounded and there's some explanation of the data that's being displayed**
 
 ```{=html}
 <iframe title="Mississippi ranks first in number of accidental teen deaths by gun per 100,000 people." aria-label="Choropleth map" id="datawrapper-chart-pr1Rc" src="https://datawrapper.dwcdn.net/pr1Rc/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
@@ -54,9 +54,9 @@ Some people/organizations I would be interested in reaching out to and interview
 
 1.  A representative from the [Everytown Support Fund](https://everytownsupportfund.org/faq/), which is an organization that focuses on gun violence prevention and publishes their own unintentional shootings by children index. I would be interested in how they go about their methodology in collecting this information.
 2.  Rebecca Wilson is the lead author of the report published through the CDC called ["Unintentional Firearm Injury Deaths Among Children and Adolescents Aged 0-17 Years"](https://www.cdc.gov/mmwr/volumes/72/wr/mm7250a1.htm#contribAff). I would be interested in if she has kept up with the trends in this report and if she can speak to the situation today.
-3.  Rep. Christian D. Menefee **rsw comment: which state and political party??** introduced the [Kimberly Vaughan Firearm Safe Storage Act.](https://www.congress.gov/bill/119th-congress/house-bill/8619/text) This bill has yet to make it through the House.
+3.  Rep. Christian D. Menefee, D-TX-18, introduced the [Kimberly Vaughan Firearm Safe Storage Act.](https://www.congress.gov/bill/119th-congress/house-bill/8619/text) This bill has yet to make it through the House.
 
-Additionally, Tennessee is home to some of the biggest gun manufacturers, including Barrett Firearms. Barrett Firearms is a private company, so I'll have to do a little bit more digging to find out more about its financials. However, the company did [announce](https://tnecd.com/news/barrett-firearms-manufacturing-inc-to-expand-headquarters-manufacturing-and-other-major-operations-in-rutherford-county/) in 2025 that it would invest \$76.4 million to create a new headquarters that would include a manufacturing facility. It is also now home to Smith & Wesson, which is publicly traded. **rsw comment: dig out the revenues and profits for Smith and Wesson from the recent 10-K**
+Additionally, Tennessee is home to some of the biggest gun manufacturers, including Barrett Firearms. Barrett Firearms is a private company, so I'll have to do a little bit more digging to find out more about its financials. However, the company did [announce](https://tnecd.com/news/barrett-firearms-manufacturing-inc-to-expand-headquarters-manufacturing-and-other-major-operations-in-rutherford-county/) in 2025 that it would invest \$76.4 million to create a new headquarters that would include a manufacturing facility. It is also now home to Smith & Wesson, which is publicly traded. Smith & Wesson brought in \$474.7 million in net sales in the 2025 fiscal year, but its net income was only \$13.4 million. This is a drop from the previous fiscal year, which was \$41.4 million.
 
 Through reporting, I hope to shed a light and connect the research that has been done on this topic with human anecdotes. This story could potentially impact gun legislation and/or awareness of safe storage.
 
@@ -151,8 +151,6 @@ all_deaths
 
 In this portion, I'll just take a look at the total counts of deaths for teens and children across states and cities/counties.
 
-> NOTE: Need to look into what Gun Violence Archive defines the categories or "Teen" and "Child" because teen is a bit ambiguous
-
 ### Teens
 
 The Gun Violence Archive has a [pre-queried page](https://www.gunviolencearchive.org/accidental-teen-deaths?page=62) for accidental deaths of teens.
@@ -174,7 +172,7 @@ teen_by_state <- teen_deaths |>
 teen_by_state
 ```
 
-Based off of just total counts, Texas has the most accidental teen deaths by firearm. We will also take a look how this stacks up per capita, taking into account that Texas is a big state.
+Based off of just total counts, Texas has the most accidental teen deaths by firearm. We will also take a look how this stacks up by population, taking into account that Texas is a big state.
 
 I'm also interested in looking at this on the city/county level.
 
@@ -244,7 +242,6 @@ We want to be able to examine these values in the context of the total populatio
 #| message: false
 #| warning: false
 
-# ask about using decennial vs. acs vs. get_estimates()
 vars <- load_variables(2024, dataset = "acs5", cache = TRUE)
 # View(vars)
 ```
@@ -366,7 +363,7 @@ child_by_state_per_1mil <- child_by_state_w_pop |>
 child_by_state_per_1mil
 ```
 
-Tennessee still comes in first with around 4 accidental child gun deaths per 1,000,000 people.
+Tennessee still comes in first with around 4 accidental child gun deaths per 1 million people.
 
 Export for visualization in Datawrapper.
 
