@@ -16,7 +16,7 @@ code-summary: "Expand to see code"
 
 This story would investigate the highest rates of accidental gun deaths for teens and children. Through preliminary data analysis, Texas and Tennessee stand at the highest total counts of accidental gun deaths for teens and children respectively. However, Mississippi beats out Texas when we consider it in terms of total population estimates.
 
-![Illustration of a crime scene figure against a red background. The figure has a star splayed against its chest and white lines emanating out from the body. Created by Teresa Do.](../images/gun_deaths_illo.png)
+![Illustration of a crime scene figure against a red background. The figure has a star splayed against its chest and white lines emanating out from the body. Created by Teresa Do.](https://github.com/djnf-data-2026/teresa-do/blob/main/images/gun_deaths_illo.png?raw=true)
 
 ## Importance
 
